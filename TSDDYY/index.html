@@ -42,14 +42,16 @@
  -->
 <body>
 
-<!-- intro
+
+<!-- intro --> 
     <div class="intro flex-column" style="display: flex;">
-        <img class="mb-5" src="images/diamonds.png" alt="diamonds" width="300">
-        <button class="goto button-second">Meet Soly</button>
+        <img class="mb-5" src="images/welcome.png" alt="diamonds" width="300">
+        <button class="goto button-second">Meet Skibidi</button>
     </div>
- -->
+
+ 
       
-    <div id="main" class="container-fluid">
+    <div id="main" class="container-fluid" style="display: none;">
         <canvas id="canvas" class="home_v4_fire_fly_bg"></canvas> <!-- fireflies -->
         <!-- navbar -->
         <header class="cd-header">
@@ -62,13 +64,14 @@
                             <span class="menu-icon__line menu-icon__line-right"></span>
                         </div>					
                     </div>
-					<!-- volume
+					<!-- volume -->
                     <div class="d-flex align-items-center">
                         <button id="mutebtn" class="p-2 d-flex align-items-center">
                             <i class="bx bx-volume-full fs-4"></i>
                         </button>			
                     </div>
-					 -->
+					
+					 
                 </div>
                 
                 
@@ -111,7 +114,9 @@
               Your browser does not support the video tag.
             </video>
         </div>
-        -->
+		-->
+		
+        
 
          <!-- Dragon year -->
          <section>
@@ -546,13 +551,15 @@ Many began to consider this meme a symbol of fun and carelessness. It has become
             // Start audio playback when the button is clicked
             audio.play();
         });
+
     });
+
 
     function initAudioPlayer() {
         mutebtn = document.getElementById("mutebtn");
 
         // Initialize the audio object
-        audio = new Audio("sound/sunstreams.ogg");
+        audio = new Audio("sound/skibidi.ogg");
         audio.loop = true;
 
         // Add Event Handling
@@ -757,7 +764,6 @@ copyMailId.forEach(copyText => {
 </script>
 
 <script src="js/fireflies.js"></script>
-
 
 
 </body></html>
