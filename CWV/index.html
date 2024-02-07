@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>ChadWifVision</title>
+    <meta name="title" content="ChadWifVision">
+    <meta name="description" content="ChadWifVision">
+	
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <!-- CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300;800&amp;family=MedievalSharp&amp;display=swap" rel="stylesheet">
+
+
+<style> 
+.home_v4_fire_fly_bg {
+  position: fixed;
+  z-index: 0;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+}
+</style>
+</head>
+
+<!-- fireflies -->
+ 
+
+<!-- fireflies
+ -->
+<body>
+
+
+<!-- intro 
+    <div class="intro flex-column" style="display: flex;">
+        <img class="mb-5" src="images/welcome.png" alt="diamonds" width="300">
+        <button class="goto button-second">Meet Skibidi</button>
+    </div>
+	--> 
+
+ 
+      
+    <div id="main" class="container-fluid">
+        <canvas id="canvas" class="home_v4_fire_fly_bg"></canvas> <!-- fireflies -->
+        <!-- navbar -->
+        <header class="cd-header">
+            <div class="header-wrapper">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="nav-but-wrap d-flex align-items-center">
+                        <div class="menu-icon hover-target">
+                            <span class="menu-icon__line menu-icon__line-left"></span>
+                            <span class="menu-icon__line"></span>
+                            <span class="menu-icon__line menu-icon__line-right"></span>
+                        </div>					
+                    </div>
+					<!-- volume 
+                    <div class="d-flex align-items-center">
+                        <button id="mutebtn" class="p-2 d-flex align-items-center">
+                            <i class="bx bx-volume-full fs-4"></i>
+                        </button>			
+                    </div>
+					-->
+					
+					 
+                </div>
+                
+                
+            </div>				
+        </header>
+    
+        <div class="nav">
+            <div class="nav__content">
+                <ul class="nav__list">
+                    <li class="nav__list-item"><a href="https://raydium.io/swap/?outputCurrency=97vJ7X5up5KEjxcdLE4cxx9sFU27BFeLB8hTeQ6TJJdS" class="hover-target">Buy SOLY</a></li>
+                    <li class="nav__list-item"><a href="https://dexscreener.com/solana/97vJ7X5up5KEjxcdLE4cxx9sFU27BFeLB8hTeQ6TJJdS" class="hover-target" target="_blank">Chart</a></li>
+                    <li class="nav__list-item"><a href="https://t.me/+aYplN8dfQ600YjA0" class="hover-target">Telegram</a></li>
+                    <li class="nav__list-item"><a href="https://twitter.com/TrrSkibidiOnSol" class="hover-target">Twitter</a></li>
+                    <li class="nav__list-item"><a href="https://solscan.io/token/97vJ7X5up5KEjxcdLE4cxx9sFU27BFeLB8hTeQ6TJJdS" class="hover-target">Solscan</a></li>
+                </ul>
+            </div>
+        </div>		
+        
+        <div class="cursor" id="cursor"></div>
+        <div class="cursor2" id="cursor2"></div>
+        <div class="cursor3" id="cursor3"></div>
+        <!-- navbar -->
+
+        <!-- 
+        <div id="hero">
+            <div class="scrolldown-container">
+                <div class="scrolldown-btn">
+                <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="80px" viewBox="0 0 50 80" enable-background="new 0 0 50 80" xml:space="preserve">
+                    <path class="first-path" fill="#FFFFFF" d="M24.752,79.182c-0.397,0-0.752-0.154-1.06-0.463L2.207,57.234c-0.306-0.305-0.458-0.656-0.458-1.057                  s0.152-0.752,0.458-1.059l2.305-2.305c0.309-0.309,0.663-0.461,1.06-0.461c0.398,0,0.752,0.152,1.061,0.461l18.119,18.119                  l18.122-18.119c0.306-0.309,0.657-0.461,1.057-0.461c0.402,0,0.753,0.152,1.059,0.461l2.306,2.305                  c0.308,0.307,0.461,0.658,0.461,1.059s-0.153,0.752-0.461,1.057L25.813,78.719C25.504,79.027,25.15,79.182,24.752,79.182z"></path>
+                    <path class="second-path" fill="#FFFFFF" d="M24.752,58.25c-0.397,0-0.752-0.154-1.06-0.463L2.207,36.303c-0.306-0.304-0.458-0.655-0.458-1.057                  c0-0.4,0.152-0.752,0.458-1.058l2.305-2.305c0.309-0.308,0.663-0.461,1.06-0.461c0.398,0,0.752,0.153,1.061,0.461l18.119,18.12                  l18.122-18.12c0.306-0.308,0.657-0.461,1.057-0.461c0.402,0,0.753,0.153,1.059,0.461l2.306,2.305                  c0.308,0.306,0.461,0.657,0.461,1.058c0,0.401-0.153,0.753-0.461,1.057L25.813,57.787C25.504,58.096,25.15,58.25,24.752,58.25z"></path>
+                </svg>
+                </div>
+            </div>
+            <video video="" autoplay="" loop="" muted="" webkit-playsinline="" playsinline="" id="video-background" style="z-index:2">
+              
+              <source src="media/bgloop.mp4" type="video/mp4">
+              
+              <source src="video/bgloop.webm" type="video/webm">
+              
+              Your browser does not support the video tag.
+            </video>
+        </div>
+		-->
+		
+        
+
+         <!-- Dragon year 
+         <section>
+            <div class="container">
+                <div id="dragon" class="row d-flex py-5 mt-5 h-50">
+                    
+                    <div class="col-12 text-center">
+                        <div class="glitch glitch--3 display-1 mt-3" data-scroll="out" data-splitting="">
+                            <h2 class="display-1 fw-bold text-center mb-5">Trrr skibidi dop dop yes yes</h2>
+                        </div>
+						
+						<p class="display-6 text-white"><kbd>Fun to the fullest!</kbd></p>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex align-items-center justify-content-center position-relative">
+                            <img class="img-fluid mt-4" src="images/about/icon.png" width="300" alt="gems">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+		-->
+        <!-- Dragon Year -->
+
+        <!-- about -->
+        <section>
+            <div class="container">
+                <div id="history" class="row d-flex py-5 mt-5 h-100">
+                    <div class="col-12 col-lg-6 order-1 order-lg-0">
+                        <div class="d-none d-lg-block align-items-center justify-content-center position-relative">
+                            <img class="img-fluid zindex-1 position-absolute" src="images/cans.png" alt="bg">
+                            <img class="img-fluid zindex-3 fly position-absolute" src="images/about/about.png" alt="soly">
+                        </div>
+                        <div class="flex d-lg-none order-1 align-items-center justify-content-center position-relative">
+                            <img class="img-fluid" src="images/about/about.png" alt="Soly">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 order-0 order-lg-1 mb-5 mb-lg-0">
+                        <div class="glitch glitch--3 display-1" data-scroll="out" data-splitting="">
+                            <h2 class="display-1 fw-bold text-center" style="font-size:42pt">SOMETHING <br> <br class="d-none d-md-block d-lg-none">SPECIAL</h2>
+                        </div>
+                        <p class="lead text-center">
+Gigachad was a powerful and lovable hero, but there was always something missing from him. One day he received virtual reality glasses as a gift. 
+<br>
+They allowed him to immerse himself in an amazing world with unlimited possibilities. Gigachad became a true hero, fighting his enemies and saving the world. 
+<br>
+The virtual reality glasses turned him into an invincible warrior, and he used his power to protect and benefit everyone. This was the beginning of a new era for Gigachada, where the virtual and real worlds merged into one.
+</p>
+                        
+                        <a href="https://raydium.io/swap/?outputCurrency=97vJ7X5up5KEjxcdLE4cxx9sFU27BFeLB8hTeQ6TJJdS" class="button w-100 d-flex justify-content-center">BUY</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about -->
+
+
+        <!-- roadmap -->
+        <!-- if you are reading this mess, I'm sorry -->
+        <section>
+            <div class="container">
+                <div id="history" class="row d-flex py-5 mt-5 h-100">
+                            <!-- blank -->
+
+                    <div class="col-12 col-lg-6 order-1 order-lg-0">
+                        <div class="flex d-lg-none order-1 align-items-center justify-content-center position-relative">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 order-0 order-lg-1 mb-5 mb-lg-0">
+                        <div class="glitch glitch--3 display-1" data-scroll="out" data-splitting="">
+                            <h2 class="display-1 fw-bold text-center" style="font-size:42pt">PHASE <br class="d-none d-md-block d-lg-none">1</h2>
+                        </div>
+                        <p class="lead text-left">
+                        • Prepare branding <br>
+                        • Create socials <br>
+                        • Launch token <br>
+                        • Build Telegram community <br>
+                        • Dextools/ Dexscreener/ Birdseye socials updates <br>
+                        • Solana / Dextools / Dexscreener / Birdseye trending <br>
+                        • X/ Twitter raids <br>
+                        • Community voice chats <br>
+                        • Blue tick verified X/ Twitter <br>
+                        • 1000 holders <br>
+                        </p>
+                        
+						</div>
+
+                    <div class="col-12 col-lg-6 order-0 order-lg-1 mb-5 mb-lg-0">
+                        <div class="glitch glitch--3 display-1" data-scroll="out" data-splitting="">
+                            <h2 class="display-1 fw-bold text-center" style="font-size:42pt">PHASE <br class="d-none d-md-block d-lg-none">2</h2>
+                        </div>
+                        <p class="lead text-left">
+                        • X Spaces - with guests <br>
+                        • X Meme competition <br>
+                        • Trending on X <br>
+                        • CG &amp; CMC Listings <br>
+                        • First set of exchange listings <br>
+                        • Moontok listing <br>
+                        • CEX listings <br>
+                        • Marketing partnerships  <br>
+                        - 2000 holders <br>                       
+                        </p>
+                        
+                    </div>
+
+
+                     <!-- blank -->
+
+                    <div class="col-12 col-lg-6 order-0 order-lg-1 mb-5 mb-lg-0">
+                    </div>
+                    <div class="col-12 col-lg-6 order-0 order-lg-1 mb-5 mb-lg-0">
+                    </div>
+
+                    <div class="col-12 col-lg-6 order-0 order-lg-1 mb-5 mb-lg-0">
+                        <div class="glitch glitch--3 display-1" data-scroll="out" data-splitting="">
+                            <h2 class="display-1 fw-bold text-center" style="font-size:42pt">PHASE <br class="d-none d-md-block d-lg-none">3</h2>
+                        </div>
+                        <p class="lead text-left">
+                        • Promo wear <br>
+                        • CEX listings  <br>
+                        • NFT previews <br>
+                        • Audit <br>
+                        • Content creation/ productions <br>
+                        • 3000 holders                 <br>        
+                        </p>
+                        
+                    </div>
+
+                    <!-- blank -->
+
+                    <div class="col-12 col-lg-6 order-0 order-lg-1 mb-5 mb-lg-0">
+                    </div>
+                    <div class="col-12 col-lg-6 order-0 order-lg-1 mb-5 mb-lg-0">
+                    </div>
+
+                    <div class="col-12 col-lg-6 order-0 order-lg-1 mb-5 mb-lg-0">
+                        <div class="glitch glitch--3 display-1" data-scroll="out" data-splitting="">
+                            <h2 class="display-1 fw-bold text-center" style="font-size:42pt">PHASE <br class="d-none d-md-block d-lg-none">4</h2>
+                        </div>
+                        <p class="lead text-left">
+                        • NFT mint release  <br>  
+                        • Merchandise   <br>  
+                        • Press reviews  <br>  
+                        • Achieve 100m  <br>   
+                        • Gain recognition/ Acknowledgement from founders of Solana <br>  
+                        • 5000+ holders   <br>                        
+                        </p>
+                        
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- roadmap -->
+
+
+        <!-- tokenomics -->
+        <section class="gradient--1">
+            <div class="container">
+                <div id="history" class="row d-flex py-5 h-100 align-items-center">
+                    <div class="col-12 col-lg-11 mx-lg-auto">
+                        <div class="glitch glitch--3 display-1 text-center" data-scroll="out" data-splitting="">
+                            <h2 class="display-1 fw-bold mb-5">TOKENOMICS</h2>
+                        </div>
+                        <div class="base mb-5">
+                            <span class="mail-info" style="word-break: break-all;">
+                              <span class="mail-text" tooltip="Click to Copy" tooltip-position="bottom">97vJ7X5up5KEjxcdLE4cxx9sFU27BFeLB8hTeQ6TJJdS</span>
+                            </span>
+                          </div>
+                        <h3 class="h4 mb-0 lh-1 text-center">
+                            <span class="d-block mb-2 fs-base fw-normal text-white">10,000,000 (10M)</span>
+                            <span class="text-secondary">Total supply</span>
+                        </h3>
+
+                        <div class="row py-5">
+                            <div class="col-md-3 col-6 order-md-1 order-2">
+                              <div class="d-flex flex-column justify-content-start h-100 text-center">
+                  
+                                <!-- Item -->
+                                <div class="mt-md-5 mt-4">
+                                  <img src="images/tokenomics/moon.png" width="100" alt="Cigs" class="d-inline-block mb-4">
+                                  <h3 class="h4 mb-0 lh-1 text-secondary">
+                                    <span class="d-block mb-2 fs-base fw-normal text-white">25%</span>
+                                    Pool liquidity
+                                  </h3>
+                                </div>
+                  
+                                <!-- Item -->
+                                <div class="mt-md-5 mt-4">
+                                  <img src="images/tokenomics/gm.png" width="100" alt="GM" class="d-inline-block mb-4">
+                                  <h3 class="h4 mb-0 lh-1 text-secondary" style="font-size:25pt">
+                                    <span class="d-block mb-2 fs-base fw-normal text-white" style="cursor:pointer;z-index:999;position:relative" onclick="window.location.href='https://solscan.io/tx/456pGGCLwgu52tHd4VN5qy2aGnfsAarg9YYUCAESqNpppVdinCjuhA4qepefPwdgaePpg1xjeSQLPxDskf7TePbQ';">Revoked</span>
+                                    Mint
+                                  </h3>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-12 order-md-2 order-1">
+                              <div class="d-flex flex-column justify-content-between h-100">
+                  
+                                <!-- Image -->
+                                <div class="mx-md-n5 mb-md-n5">
+                                  <img src="images/tokenomics/tokenomics.png" alt="tokenomics" class="img-fluid d-flex mx-auto" style="max-width: 340px;">
+                                </div>
+
+                              </div>
+                            </div>
+                            <div class="col-md-3 col-6 order-md-3 order-3">
+                              <div class="d-flex flex-column justify-content-start h-100 text-center">
+                  
+                                <!-- Item -->
+                                <div class="mt-md-5 mt-4">
+                                  <img src="images/tokenomics/marketing.png" width="100" alt="Icon" class="d-inline-block mb-4">
+                                  <h3 class="h4 mb-0 lh-1 text-secondary" style="font-size:25pt">
+                                    <span class="d-block mb-2 fs-base fw-normal text-white">0%</span>
+                                    Tax
+                                  </h3>
+                                </div>
+                  
+                                <!-- Item -->
+                                <div class="mt-md-5 mt-4">
+                                  <img src="images/tokenomics/chest.png" alt="Chest" width="100" class="d-inline-block mb-4">
+                                  <h3 class="h4 mb-0 lh-1 text-secondary" style="font-size:25pt">
+                                    <span class="d-block mb-2 fs-base fw-normal text-white" style="cursor:pointer;z-index:999;position:relative" onclick="window.location.href='https://solscan.io/tx/PrRtgMxbm5mh56PBvdcYxqjStzPMazNnVm1q5tJyhhEqLtaUsuNcSV7pUue4s5V7pHXSYswpCEJ22R8NQKGWP5M';">Burned</span>
+                                    Liquidity
+                                  </h3>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- tokenomics -->
+
+
+
+        <!-- CHART 
+
+        <section>
+            <div class="container">
+                <section class="cards row my-5 mx-auto justify-content-center">
+                    <div class="glitch glitch--3 display-1 text-center" data-scroll="out" data-splitting="">
+                        <h2 class="display-1 fw-bold mb-5">CHART</h2>
+                    </div>
+
+
+<style>#dexscreener-embed{position:relative;width:100%;padding-bottom:125%;}@media(min-width:1400px){#dexscreener-embed{padding-bottom:65%;}}#dexscreener-embed iframe{position:absolute;width:100%;height:100%;top:0;left:0;border:0;}</style><div id="dexscreener-embed"><iframe src="https://dexscreener.com/solana/97vJ7X5up5KEjxcdLE4cxx9sFU27BFeLB8hTeQ6TJJdS?embed=1&amp;theme=dark"></iframe></div>
+
+                  </section>
+            </div>
+        </section>
+		-->
+
+        <!-- CHART -->
+
+
+        <!-- Gallery -->
+        <section>
+            <div class="container">
+                <section class="cards row my-5 mx-auto justify-content-center">
+                    <div class="glitch glitch--3 display-1 text-center" data-scroll="out" data-splitting="">
+                        <h2 class="display-1 fw-bold mb-5">GALLERY</h2>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex justify-content-center">
+                            <span class="card cardz" style="background-image:url('images/gallery/1.png');pointer-events:none">
+                            </span>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex justify-content-center">
+                            <span class="card cardz" style="background-image:url('images/gallery/2.png');pointer-events:none">
+                            </span>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex justify-content-center">
+                            <span class="card cardz" style="background-image:url('images/gallery/3.png');pointer-events:none">
+                            </span>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex justify-content-center">
+                            <span class="card cardz" style="background-image:url('images/gallery/4.png');pointer-events:none">
+                            </span>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex justify-content-center">
+                            <span class="card cardz" style="background-image:url('images/gallery/5.png');pointer-events:none">
+                            </span>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex justify-content-center">
+                            <span class="card cardz" style="background-image:url('images/gallery/6.png');pointer-events:none">
+                            </span>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex justify-content-center">
+                            <span class="card cardz" style="background-image:url('images/gallery/7.png');pointer-events:none">
+                            </span>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex justify-content-center">
+                            <span class="card cardz" style="background-image:url('images/gallery/8.png');pointer-events:none">
+                            </span>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex justify-content-center">
+                            <span class="card cardz" style="background-image:url('images/gallery/9.png');pointer-events:none">
+                            </span>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex justify-content-center">
+                            <span class="card cardz" style="background-image:url('images/gallery/10.png');pointer-events:none">
+                            </span>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex justify-content-center">
+                            <span class="card cardz" style="background-image:url('images/gallery/11.png');pointer-events:none">
+                            </span>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex justify-content-center">
+                            <span class="card cardz" style="background-image:url('images/gallery/12.png');pointer-events:none">
+                            </span>
+                    </div>
+
+                  </section>
+            </div>
+        </section>
+        <!-- links -->
+
+
+
+
+        <!-- links -->
+        <section>
+            <div class="container">
+                <section class="cards row my-5 mx-auto justify-content-center">
+                    <div class="glitch glitch--3 display-1 text-center" data-scroll="out" data-splitting="">
+                        <h2 class="display-1 fw-bold mb-5">USEFUL LINKS</h2>
+                    </div>
+                    <div class="col-12 col-lg-4 d-flex justify-content-center">
+                        <a href="https://solscan.io/token/97vJ7X5up5KEjxcdLE4cxx9sFU27BFeLB8hTeQ6TJJdS">
+                            <span class="card cardz solscan animated">
+                                <h3 class="text-white txt h-100">SOLSCAN</h3>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col-12 col-lg-4 d-flex justify-content-center">
+                        <a href="https://twitter.com/TrrSkibidiOnSol">
+                            <span class="card cardz twitter animated">
+                                <h3 class="text-white txt h-100">TWITTER</h3>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col-12 col-lg-4 d-flex justify-content-center">
+                        <a href="https://t.me/+aYplN8dfQ600YjA0">
+                            <span class="card cardz telegram animated">
+                                <h3 class="text-white txt h-100">TELEGRAM</h3>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col-12 col-lg-4 d-flex justify-content-center">
+                        <a href="https://dexscreener.com/solana/97vJ7X5up5KEjxcdLE4cxx9sFU27BFeLB8hTeQ6TJJdS">
+                            <span class="card cardz gecko animated">
+                                <h3 class="text-white txt h-100">DexScreener</h3>
+                            </span>
+                        </a>
+                    </div>
+                  </section>
+            </div>
+        </section>
+        <!-- links -->
+
+        <!-- footer -->
+        <footer>
+            <div class="container-fluid text-center">
+                <ul class="list-inline py-5">
+                    <li class="list-inline-item text-secondary">© 2024</li>
+                </ul>
+            </div>
+        </footer>
+        <!-- footer -->
+
+    </div>
+    
+
+<!-- scripts -->
+<script data-cfasync="false" src="js/email-decode.min.js"></script><script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src="js/splitting.js"></script>
+<!-- scripts -->
+
+<script defer="">
+    var audio, mutebtn;
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const intro = document.querySelector('.intro');
+        const container = document.getElementById('main');
+        const gotoButton = document.querySelector('.goto');
+
+        gotoButton.addEventListener('click', function() {
+            console.log('Button clicked!');
+            intro.style.display = 'none';
+            container.style.display = 'block';
+
+            // Start audio playback when the button is clicked
+            audio.play();
+        });
+
+    });
+
+
+    function initAudioPlayer() {
+        mutebtn = document.getElementById("mutebtn");
+
+        // Initialize the audio object
+        audio = new Audio("sound/skibidi.ogg");
+        audio.loop = true;
+
+        // Add Event Handling
+        mutebtn.addEventListener("click", toggleMute);
+
+        // Function to toggle mute/unmute
+        function toggleMute() {
+            audio.muted = !audio.muted;
+            updateMuteButton();
+        }
+
+        // Function to update mute button icon
+        function updateMuteButton() {
+            if (audio.muted) {
+                mutebtn.innerHTML = "<i class='bx bxs-volume-mute fs-4'></i>";
+            } else {
+                mutebtn.innerHTML = "<i class='bx bxs-volume-full fs-4'></i>";
+            }
+        }
+    }
+
+    window.addEventListener("load", initAudioPlayer);
+</script>
+
+<!-- menu -->
+<script>
+
+
+/* Please ❤ this if you like it! */
+
+
+(function($) { "use strict";
+		
+        //Page cursors
+    
+        document.getElementsByTagName("body")[0].addEventListener("mousemove", function(n) {
+            t.style.left = n.clientX + "px", 
+            t.style.top = n.clientY + "px", 
+            e.style.left = n.clientX + "px", 
+            e.style.top = n.clientY + "px", 
+            i.style.left = n.clientX + "px", 
+            i.style.top = n.clientY + "px"
+        });
+        var t = document.getElementById("cursor"),
+            e = document.getElementById("cursor2"),
+            i = document.getElementById("cursor3");
+        function n(t) {
+            e.classList.add("hover"), i.classList.add("hover")
+        }
+        function s(t) {
+            e.classList.remove("hover"), i.classList.remove("hover")
+        }
+        s();
+        for (var r = document.querySelectorAll(".hover-target"), a = r.length - 1; a >= 0; a--) {
+            o(r[a])
+        }
+        function o(t) {
+            t.addEventListener("mouseover", n), t.addEventListener("mouseout", s)
+        }
+        
+        //Navigation
+    
+        var app = function () {
+            var body = undefined;
+            var menu = undefined;
+            var menuItems = undefined;
+            var init = function init() {
+                body = document.querySelector('body');
+                menu = document.querySelector('.menu-icon');
+                menuItems = document.querySelectorAll('.nav__list-item');
+                applyListeners();
+            };
+            var applyListeners = function applyListeners() {
+                menu.addEventListener('click', function () {
+                    return toggleClass(body, 'nav-active');
+                });
+            };
+            var toggleClass = function toggleClass(element, stringClass) {
+                if (element.classList.contains(stringClass)) element.classList.remove(stringClass);else element.classList.add(stringClass);
+            };
+            init();
+        }();
+    
+        
+        //Switch light/dark
+        
+        $("#switch").on('click', function () {
+            if ($("body").hasClass("light")) {
+                $("body").removeClass("light");
+                $("#switch").removeClass("switched");
+            }
+            else {
+                $("body").addClass("light");
+                $("#switch").addClass("switched");
+            }
+        });
+        
+    })(jQuery); 
+</script>
+
+<script>
+    const { Splitting } = window;
+    Splitting();
+    window.ScrollOut({
+    scrollingElement: '.container',
+    targets: '.text' });
+</script>
+
+<script>
+var x;
+var $cards = $(".card");
+var $style = $(".hover");
+
+$cards
+  .on("mousemove touchmove", function(e) { 
+    // normalise touch/mouse
+    var pos = [e.offsetX,e.offsetY];
+    e.preventDefault();
+    if ( e.type === "touchmove" ) {
+      pos = [ e.touches[0].clientX, e.touches[0].clientY ];
+    }
+    var $card = $(this);
+    // math for mouse position
+    var l = pos[0];
+    var t = pos[1];
+    var h = $card.height();
+    var w = $card.width();
+    var px = Math.abs(Math.floor(100 / w * l)-100);
+    var py = Math.abs(Math.floor(100 / h * t)-100);
+    var pa = (50-px)+(50-py);
+    // math for gradient / background positions
+    var lp = (50+(px - 50)/1.5);
+    var tp = (50+(py - 50)/1.5);
+    var px_spark = (50+(px - 50)/7);
+    var py_spark = (50+(py - 50)/7);
+    var p_opc = 20+(Math.abs(pa)*1.5);
+    var ty = ((tp - 50)/2) * -1;
+    var tx = ((lp - 50)/1.5) * .5;
+    // css to apply for active card
+    var grad_pos = `background-position: ${lp}% ${tp}%;`
+    var sprk_pos = `background-position: ${px_spark}% ${py_spark}%;`
+    var opc = `opacity: ${p_opc/100};`
+    var tf = `transform: rotateX(${ty}deg) rotateY(${tx}deg)`
+    // need to use a <style> tag for psuedo elements
+    var style = `
+      .card:hover:before { ${grad_pos} }  /* gradient */
+      .card:hover:after { ${sprk_pos} ${opc} }   /* sparkles */ 
+    `
+    // set / apply css class and style
+    $cards.removeClass("active");
+    $card.removeClass("animated");
+    $card.attr( "style", tf );
+    $style.html(style);
+    if ( e.type === "touchmove" ) {
+      return false; 
+    }
+    clearTimeout(x);
+  }).on("mouseout touchend touchcancel", function() {
+    // remove css, apply custom animation on end
+    var $card = $(this);
+    $style.html("");
+    $card.removeAttr("style");
+    x = setTimeout(function() {
+      $card.addClass("animated");
+    },2500);
+  });
+</script>
+
+<script>
+    const copyMailId = document.querySelectorAll('.mail-text');
+
+copyMailId.forEach(copyText => {
+    copyText.addEventListener('click', () => {
+        const selection = window.getSelection();
+        const range = document.createRange();
+        range.selectNodeContents(copyText);
+        selection.removeAllRanges();
+        selection.addRange(range);
+
+        try {
+            document.execCommand('copy');
+            selection.removeAllRanges();
+
+            const mailId = copyText.textContent;
+            copyText.textContent = 'CA copied to your clipboard!';
+            copyText.classList.add('success');
+
+            setTimeout(() => {
+                copyText.textContent = mailId;
+                copyText.classList.remove('success');
+            }, 1000);
+        } catch (e) {
+            copyText.textContent = 'Couldn\'t copy, hit Ctrl+C!';
+            copyText.classList.add('error');
+
+            setTimeout(() => {
+                errorMsg.classList.remove('show');
+            }, 1200);
+        }
+    });
+});
+</script>
+
+<script src="js/fireflies.js"></script>
+
+
+</body></html>
